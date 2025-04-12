@@ -180,7 +180,7 @@ public class Controladora {
                     "^LL102\n" +
                     "^FO30,28^A0N,17,17^FD  " + precio + "M ^FS\n" +
                     "^FO30,60^A0N,17,17^FD " + infoPiedra + " ^FS\n" +
-                    "^FO425,15^BY1,3,50^BCN,50,Y,N^FD" + id + "^FS\n" +
+                    "^FO450,15^BY1,3,50^BCN,50,Y,N^FD" + id + "^FS\n" +
                     "^XZ";
         } else {
             // Etiqueta estándar
@@ -189,7 +189,7 @@ public class Controladora {
                     "^LL102\n" +
                     "^FO30,28^A0N,24,24^FD  " + peso + "Q ^FS\n" +
                     "^FO30,58^A0N,19,19^FD" + precio + " ^FS\n" +
-                    "^FO425,15^BY1,3,50^BCN,50,Y,N^FD" + id + "^FS\n" +
+                    "^FO450,15^BY1,3,50^BCN,50,Y,N^FD" + id + "^FS\n" +
                     "^XZ";
         }
     }
