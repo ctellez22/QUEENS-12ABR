@@ -56,7 +56,7 @@ public class Impresora {
 
     private void imprimirEnMac(String zplData) {
         String filePath = System.getProperty("user.home") + "/Desktop/bebeBoste.zpl";
-        String printerName = "Zebra_Technologies_ZTC_ZD421-203dpi_ZPL"; // Cambiar por el nombre exacto de tu impresora en macOS
+        String printerName = "Zebra_Technologies_ZTC_ZD421_203dpi_ZPL"; // Asegúrate de que sea el nombre exacto
 
         try {
             // Crear el archivo ZPL
@@ -67,13 +67,15 @@ public class Impresora {
 
             System.out.println("Archivo ZPL creado exitosamente en: " + zplFile.getAbsolutePath());
 
-            // Crear el comando para enviar el archivo ZPL en modo raw a la impresora
-            String lpCommand = String.format("lp -d \"%s\" -o raw \"%s\"", printerName, zplFile.getAbsolutePath());
+            // Ejecutar comando lp directamente como argumentos separados
+            ProcessBuilder lpProcessBuilder = new ProcessBuilder(
+                    "lp",
+                    "-d", printerName,
+                    "-o", "raw",
+                    zplFile.getAbsolutePath()
+            );
 
-            // Configurar el proceso para ejecutar el comando
-            ProcessBuilder lpProcessBuilder = new ProcessBuilder("bash", "-c", lpCommand);
-
-            // Redirigir salida estándar y errores para mayor claridad
+            // Redirigir salida estándar y errores
             lpProcessBuilder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             lpProcessBuilder.redirectError(ProcessBuilder.Redirect.INHERIT);
 
@@ -87,6 +89,7 @@ public class Impresora {
             } else {
                 System.err.println("Error al enviar la etiqueta a la impresora. Código de salida: " + printExitCode);
             }
+
         } catch (IOException | InterruptedException e) {
             System.err.println("Error al crear el archivo ZPL o al enviar la etiqueta a la impresora.");
             e.printStackTrace();

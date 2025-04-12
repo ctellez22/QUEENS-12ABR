@@ -63,7 +63,7 @@ public class Principal {
     }
     private void cargarImagenEnPanelFoto() {
         // Ruta de la imagen (ajusta la ruta según la ubicación de tu imagen)
-        String imagePath = "/aca.png";
+        String imagePath = "/holaa.png";
 
         try {
             // Cargar y escalar la imagen

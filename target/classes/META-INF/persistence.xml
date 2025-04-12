@@ -21,9 +21,9 @@
       <property name="hibernate.format_sql" value="false"/>
 
       <!-- Configuración de conexión a la base de datos -->
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://marihel.ck38iw4amrdb.us-east-1.rds.amazonaws.com:3306/marihel"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://queens.cu3gy88c0b80.us-east-1.rds.amazonaws.com:3306/queens"/>
       <property name="jakarta.persistence.jdbc.user" value="admin"/>
-      <property name="jakarta.persistence.jdbc.password" value="mariheljoyas"/>
+      <property name="jakarta.persistence.jdbc.password" value="Hola2005"/>
       <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 
       <!-- Pool de Conexiones HikariCP -->
