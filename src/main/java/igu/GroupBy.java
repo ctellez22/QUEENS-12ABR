@@ -373,7 +373,7 @@ public class GroupBy {
         for (CategoriaVerificacion cat : categorias) {
             long dias = ChronoUnit.DAYS.between(cat.getUltimaFechaVerificacion(), LocalDateTime.now());
             // Ícono: ✗ si >20 días, ✓ si <=20 días.
-            String icono = (dias > 20) ? "\u2717 " : "\u2713 ";
+            String icono = (dias > 35) ? "\u2717 " : "\u2713 ";
             String texto = icono + cat.getNombreCategoria() + " - " + dias + " días sin verificación";
             JLabel lblCategoria = new JLabel(texto);
             lblCategoria.setFont(new Font("SansSerif", Font.BOLD, 14));
