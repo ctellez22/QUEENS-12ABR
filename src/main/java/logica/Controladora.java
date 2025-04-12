@@ -187,7 +187,7 @@ public class Controladora {
             return "^XA\n" +
                     "^PW984\n" +
                     "^LL102\n" +
-                    "^FO30,28^A0N,24,24^FD  " + peso + "M ^FS\n" +
+                    "^FO30,28^A0N,24,24^FD  " + peso + "Q ^FS\n" +
                     "^FO30,58^A0N,19,19^FD" + precio + " ^FS\n" +
                     "^FO425,15^BY1,3,50^BCN,50,Y,N^FD" + id + "^FS\n" +
                     "^XZ";
